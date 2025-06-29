@@ -10,7 +10,6 @@
     $email = $_POST["email"];
     $password = $_POST["pass"];
 
-    // preparing
     $checkStmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
     $checkStmt->bind_param("s",$email);
     $checkStmt->execute();
