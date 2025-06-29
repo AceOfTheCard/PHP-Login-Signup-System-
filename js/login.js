@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const emailRequirement = document.getElementById("emailRequirement");
     const passwordRequirement = document.getElementById("passwordRequirements");
 
-     // checking email
     email.addEventListener("blur", function(){
         let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if(!pattern.test(email.value) && email.value != ""){
@@ -18,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
             
         }
     })
-
-    // checking password 
+     
     password.addEventListener("blur", function(){
         let pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/;
         if(!pattern.test(password.value) && password.value != ""){
